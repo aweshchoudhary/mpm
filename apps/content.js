@@ -96,7 +96,7 @@ const products = [
     name: "ALLU ALLU MACHINES (Flat Bed Type for Thermoformed & Cold Formed Blister Packs)",
     category: 1,
     model: "MPM 2530 S [ALU + PVC]",
-    img: "MPM-2530-S.jpg",
+    img: "PPC-2530-S.jpg",
     desc: [
       {
         name: "Special Features",
@@ -262,7 +262,7 @@ const products = [
           "automatic printing unit",
           "festo cylinder pneumatic system",
           "cam base system",
-          "MPM super av machine",
+          "ppc super av machine",
         ],
       },
       {
@@ -294,7 +294,7 @@ const products = [
     name: "Blister Packing Double Track Machine",
     category: 2,
     model: "MPM - 240",
-    img: "MPM-240.jpg",
+    img: "ppc-240.jpg",
     desc: [
       {
         name: "Special Features",
@@ -348,7 +348,7 @@ const products = [
     name: "Blister Packing Single Track Machine",
     category: 2,
     model: "MPM - 150",
-    img: "MPM-150.jpg",
+    img: "ppc-150.jpg",
     desc: [
       {
         name: "Special Features",
@@ -404,7 +404,7 @@ const products = [
     name: "Blister Ampoules Rotary Machine",
     category: 2,
     model: "MPM - AMPOULES ROTARY",
-    img: "MPM-ampoules-rotary.jpg",
+    img: "ppc-ampoules-rotary.jpg",
     desc: [
       {
         name: "Special Features",
@@ -513,7 +513,7 @@ const products = [
     name: "Universal De Blister Machine (G.M.P. Model)",
     category: 2,
     model: "MPM – DIE BLISTER",
-    img: "MPM-de-blister.jpg",
+    img: "ppc-de-blister.jpg",
     desc: [
       {
         name: "Special Features",
@@ -546,7 +546,7 @@ const products = [
     name: "Alu Alu Machine (Lab Model)",
     category: 1,
     model: "MPM – LAB MODEL (ALU + PVC)",
-    img: "MPM-lab-model.jpg",
+    img: "ppc-lab-model.jpg",
     desc: [
       {
         name: "Special Features",
@@ -594,8 +594,8 @@ const products = [
     id: 12,
     name: "Tablet De-Duster Machine",
     category: null,
-    model: "PP4 Tablet Cleaning and de-burring unit",
-    img: "MPM-de-duster.jpg",
+    model: "MPM4 Tablet Cleaning and de-burring unit",
+    img: "ppc-de-duster.jpg",
     desc: [
       {
         name: "Description",
