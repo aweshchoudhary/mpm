@@ -1,0 +1,80 @@
+<footer
+  class="page-footer font-small bg-dark text-light"
+  style="padding-left: 0px"
+>
+  <div style="background-color: #1200e5">
+    <div class="container">
+      <div class="row py-4 d-flex align-items-center">
+        <div
+          class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0"
+        ></div>
+        <div class="col-md-6 col-lg-7 text-center text-md-right"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center text-md-start mt-5">
+    <div class="row mt-3">
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">Company name</h6>
+        <hr
+          class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+          style="width: 60px"
+        />
+        <p>
+          Meditech Pharma Machinery is a prominent Pharmaceutical Machinery
+          Manufacture established in 2010 with an aim to meet the imperatives of
+          the growing pharmaceutical market.
+        </p>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">Category</h6>
+        <hr
+          class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+          style="width: 60px"
+        />
+        <% category.map((e)=>{ %>
+        <p>
+          <a href="#!" class="text-capitalize"><%= e.name %></a>
+        </p>
+        <% }) %>
+      </div>
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr
+          class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+          style="width: 60px"
+        />
+        <p>
+          <a href="/">Home</a>
+        </p>
+        <p>
+          <a href="/p/about">About Us</a>
+        </p>
+        <p>
+          <a href="/p/services">Services</a>
+        </p>
+        <p>
+          <a href="/p/contact">Contact Us</a>
+        </p>
+      </div>
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr
+          class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+          style="width: 60px"
+        />
+        <p><i class="fas fa-home mr-3"></i> www.meditechpharmamachinery.tk</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> meditechpharmamachinery@gmail.com
+        </p>
+        <p><i class="fas fa-phone mr-3"></i> + 91 7395059329</p>
+        <p><i class="fas fa-print mr-3"></i> + 91 9015077510</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright text-center py-3">
+    © 2020 Copyright:
+    <a href="/"> meditechpharmamachinery.tk</a>
+  </div>
+</footer>

@@ -1,0 +1,114 @@
+* {
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+#logo {
+  height: auto;
+  width: 200px;
+}
+
+.navbar {
+  border-bottom: 1px solid rgb(232, 232, 232);
+}
+
+.nav-item {
+  font-weight: 500;
+  font-size: 18px;
+  padding: 0 7px;
+}
+
+.nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.nav-link:hover {
+  color: #1200e5;
+}
+
+.card {
+  width: auto;
+  min-height: 320px;
+}
+.card .card-img {
+  height: 200px;
+}
+.card .card-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn-primary,
+.bg-primary,
+.list-group-item.active {
+  background: #1200e5;
+}
+
+.text-primary {
+  color: #1200e5 !important;
+}
+
+#img-container {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background: rgb(239, 239, 239);
+}
+#img-container img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.tabcontent {
+  display: none;
+  -webkit-animation: fadeEffect 1s;
+          animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  #img-container {
+    height: 300px;
+  }
+  .similar-list {
+    display: none;
+  }
+  #logo {
+    width: 150px;
+  }
+  .card {
+    min-height: 300px;
+    overflow: hidden;
+  }
+  .card .card-img {
+    height: 170px;
+  }
+}/*# sourceMappingURL=styles.css.map */

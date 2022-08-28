@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row p-0">
+    <div class="col-12 p-0">
+      <div
+        class="wrapper bg-black position-relative"
+        style="width: 100%; height: 400px"
+      >
+        <img
+          src="https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          alt="meditech Pharma Machinery about us page background image"
+          style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7"
+        />
+        <h1
+          class="position-absolute text-center fw-bolder text-white"
+          style="
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            font-size: 60px;
+          "
+        >
+          About Us
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="row my-5 py-5 px-md-5">
+    <div class="col-md-5">
+      <img
+        src="http://www.blkpharmatech.com/unnamed.jpg"
+        class="width:100%;"
+        alt="About Us"
+      />
+    </div>
+    <div class="col-md-7">
+      <p class="lead ps-3">
+        <%details.map((e)=>{%> <%if(e.name == "description"){%> <%- e.content %>
+        <%}%> <%})%>
+      </p>
+    </div>
+  </div>
+</div>

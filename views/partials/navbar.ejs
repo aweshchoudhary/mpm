@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg px-md-5">
+  <div class="container-fluid d-flex justify-between">
+    <a class="navbar-brand" href="/"
+      ><img id="logo" src="/img/logo.png" alt="Meditech Pharma Machinery Logo"
+    /></a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse flex-grow-0"
+      id="navbarSupportedContent"
+    >
+      <ul
+        class="navbar-nav mt-lg-0 mt-3 me-auto mb-2 mb-lg-0 align-items-lg-center"
+      >
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/p/about">About Us</a>
+        </li>
+        <li class="nav-item dropdown position-relative">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Product List
+          </a>
+          <ul
+            class="dropdown-menu text-capitalize position-absolute end-100"
+            style="width: fit-content"
+          >
+            <% products.map((e)=>{ %>
+            <li>
+              <a
+                class="dropdown-item text-capitalize border-bottom"
+                href="/product/<%= e.id %>"
+              >
+                <% if(e.category != null){ %> <% category.map((c)=>{ %> <%
+                if(e.category == c.id){ %> <%= c.name + ", " + e.model %> <%}%>
+                <%})%> <%}else{%> <%= e.model %> <%}%>
+              </a>
+            </li>
+            <%})%>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="/p/about">Brochure</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-light btn btn-primary px-3 py-2 mt-lg-0 mt-3 ms-lg-3 d-block"
+            style="width: fit-content"
+            href="/p/contact"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

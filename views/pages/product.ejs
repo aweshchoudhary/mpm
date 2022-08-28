@@ -1,0 +1,86 @@
+<div class="container-fluid px-md-5 py-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="page-nav text-capitalize fs-5 text-primary">
+        <a href="/">home</a>
+        <% category.map((c)=>{ %> <% if(p.category == c.id){ %> /
+        <a href="/c/<%= c.id %>"><%= c.name %></a>
+        <%}%> <%})%>
+      </div>
+      <h3 class="text-uppercase"><%= p.name %></h3>
+      <div class="model fs-5">
+        <p>Model: <span class="text-uppercase"><%= p.model %></span></p>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div id="img-container">
+        <img src="/img/products/<%= p.img %>" alt="<%= p.name %>" />
+      </div>
+    </div>
+    <div class="col-md-5 position-relative similar-list">
+      <h3>Similar Machines</h3>
+      <div class="list-group" style="height: 380px; overflow: auto">
+        <% products.map((e)=>{ %> <% if(p.category == e.category && p.id !=
+        e.id){ %>
+        <a
+          href="/product/<%= e.id %>"
+          class="list-group-item py-3 <text-capitalize></text-capitalize> list-group-item-action"
+          style="font-weight: 500"
+        >
+          <%= e.name %>
+        </a>
+        <%}%> <% }) %>
+      </div>
+      <div class="position-absolute bottom-0">
+        <a href="#" class="btn btn-primary px-4 py-3">Enquiry</a>
+        <a href="#" class="btn btn-dark px-4 py-3">Contact Us</a>
+      </div>
+    </div>
+    <div class="row my-5 p-0 mx-0">
+      <div class="col-md-4">
+        <div class="list-group tab mb-md-0 mb-3">
+          <% p.desc.map((e, i)=>{ %> <% if(i == 0){ %>
+          <button
+            class="tablinks list-group-item py-3 text-capitalize list-group-item-action fs-5 fw-bold"
+            id="defaultOpen"
+            onclick="openCity(event, '<%= e.name %>')"
+          >
+            <%= e.name%>
+          </button>
+          <% }else{ %>
+          <button
+            class="tablinks list-group-item py-3 text-capitalize list-group-item-action fs-5 fw-bold"
+            onclick="openCity(event, '<%= e.name %>')"
+          >
+            <%= e.name%>
+          </button>
+          <% } %> <%})%>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="content-content border p-md-4 p-2" style="min-height: 100%">
+          <% p.desc.map((e)=>{ %>
+          <div id="<%= e.name %>" class="tabcontent">
+            <div class="card-heading mb-3 text-capitalize">
+              <h2><%= e.name %></h2>
+            </div>
+            <div class="card-content">
+              <% if(e.type == "list"){ %> <% e.content.map((l)=>{ %>
+              <li class="fs-5 d-flex align-items-center py-2 text-capitalize">
+                <iconify-icon
+                  icon="ic:baseline-double-arrow"
+                  class="me-3 fs-4"
+                ></iconify-icon>
+                <%= l %>
+              </li>
+              <% }) %> <% }else if(e.type == "para"){ %>
+              <p class="lead"><%- e.content %></p>
+              <% }else if(e.type == "table"){ %> <%- e.content %> <% } %>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,177 @@
+<div
+  id="carouselExampleControls"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <% banner.map((e, i)=>{ %> <% if(i == 0){ %>
+    <div class="carousel-item active">
+      <img
+        src="/img/banner/<%= e %>"
+        class="d-block w-100"
+        alt="meditech pharm machinery slider image"
+      />
+    </div>
+    <% }else{ %>
+    <div class="carousel-item">
+      <img
+        src="/img/banner/<%= e %>"
+        class="d-block w-100"
+        alt="meditech pharm machinery slider image"
+      />
+    </div>
+    <% } %> <% }) %>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon text-primary" aria-hidden="true"
+      ><iconify-icon icon="dashicons:arrow-left-alt" class="fs-1"></iconify-icon
+    ></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon text-primary" aria-hidden="true">
+      <iconify-icon
+        icon="dashicons:arrow-right-alt"
+        class="fs-1"
+      ></iconify-icon>
+    </span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container-fluid p-md-5 py-4">
+  <div class="row">
+    <% details.map((e)=>{ %> <% if(e.name == "description"){ %>
+    <h1 class="mb-5">Welcome to Meditech Pharma Machinery</h1>
+    <p class="fs-5"><%- e.content%></p>
+    <%} %> <%}) %>
+  </div>
+</div>
+<div class="container-fluid my-5 px-md-5 px-3">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="mb-3">Featured Machines</h1>
+    </div>
+    <% products.map((e, i)=>{ %> <% if(i<8){ %>
+    <div class="col-lg-3 col-md-4 col-6 px-2">
+      <%- include("./partials/card", {e})%>
+    </div>
+    <%}%> <% }) %>
+  </div>
+</div>
+<div class="container-fluid bg-light py-5 px-md-5">
+  <div class="row">
+    <div class="d-md-block d-none col-md-6 d-flex align-items-center">
+      <h1>
+        Get in touch,<br />
+        Fill the contact form
+      </h1>
+    </div>
+    <div class="col-md-6">
+      <div class="wrapper">
+        <h1 class="text-center mb-5">Enquiry</h1>
+        <form id="contact-form" method="post" action="" role="form">
+          <div class="messages"></div>
+
+          <div class="controls">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="form_name">Firstname *</label>
+                  <input
+                    id="form_name"
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    placeholder="Please enter your firstname *"
+                    required="required"
+                    data-error="Firstname is required."
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="form_lastname">Lastname *</label>
+                  <input
+                    id="form_lastname"
+                    type="text"
+                    name="surname"
+                    class="form-control"
+                    placeholder="Please enter your lastname *"
+                    required="required"
+                    data-error="Lastname is required."
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="form_email">Email *</label>
+                  <input
+                    id="form_email"
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Please enter your email *"
+                    required="required"
+                    data-error="Valid email is required."
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="form_phone">Phone</label>
+                  <input
+                    id="form_phone"
+                    type="tel"
+                    name="phone"
+                    class="form-control"
+                    placeholder="Please enter your phone"
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="form_message">Message *</label>
+                  <textarea
+                    id="form_message"
+                    name="message"
+                    class="form-control"
+                    placeholder="Message for me *"
+                    rows="4"
+                    required
+                    data-error="Please,leave us a message."
+                  ></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <input
+                  type="submit"
+                  class="btn btn-primary py-3 px-4 mt-4 btn-send"
+                  value="Send message"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
