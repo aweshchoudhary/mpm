@@ -2,12 +2,12 @@ const router = require("express").Router();
 const { products, category, banner, details } = require("../apps/content");
 
 router.get("/", (req, res) => {
-  res.render("home", { products, category, banner, details });
+  res.render("home", { products, category, banner, details, title: "Home" });
 });
 
 router.get("/p/:page", (req, res) => {
   const q = req.params.page;
-  res.render(`./pages/${q}`, { category, products, details });
+  res.render(`./pages/${q}`, { category, products, details, title: q });
 });
 
 router.get("/c/:id", (req, res) => {
@@ -25,7 +25,13 @@ router.get("/c/:id", (req, res) => {
     }
   });
 
-  res.render(`./pages/category`, { items, category, cname, products });
+  res.render(`./pages/category`, {
+    items,
+    category,
+    cname,
+    products,
+    title: cname,
+  });
 });
 
 router.get("/product/:id", (req, res) => {
@@ -36,7 +42,7 @@ router.get("/product/:id", (req, res) => {
       p = e;
     }
   });
-  res.render("./pages/product", { p, products, category });
+  res.render("./pages/product", { p, products, category, title: p.name });
 });
 
 module.exports = router;
