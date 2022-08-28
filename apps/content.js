@@ -3,7 +3,7 @@ const products = [
     id: 3,
     name: "Alu Alu Machines (Flad Bed Machines For Thermoformed And Cold Formed Blister Packs)",
     category: 1,
-    model: "PPC – 300 SUPER",
+    model: "MPM – 300 SUPER",
     img: "double-track-alu-alu-blister-packing-machine.jpg",
     desc: [
       {
@@ -95,8 +95,8 @@ const products = [
     id: 4,
     name: "ALLU ALLU MACHINES (Flat Bed Type for Thermoformed & Cold Formed Blister Packs)",
     category: 1,
-    model: "PPC 2530 S [ALU + PVC]",
-    img: "PPC-2530-S.jpg",
+    model: "MPM 2530 S [ALU + PVC]",
+    img: "MPM-2530-S.jpg",
     desc: [
       {
         name: "Special Features",
@@ -174,7 +174,7 @@ const products = [
     id: 5,
     name: "300 EXPRESS MACHINE (Rotary Machine for Thermoformed Blister Packs)",
     category: 1,
-    model: "PPC 300 EXPRESS [PVC + ALU]",
+    model: "MPM 300 EXPRESS [PVC + ALU]",
     img: "double-track-alu-alu-blister-packing-machine.jpg",
     desc: [
       {
@@ -244,7 +244,7 @@ const products = [
     id: 6,
     name: "300 SUPER AV (Ampoules /Vails)",
     category: null,
-    model: "PPC – 300 SUPER",
+    model: "MPM – 300 SUPER",
     img: "300-super-av.jpg",
     desc: [
       {
@@ -262,7 +262,7 @@ const products = [
           "automatic printing unit",
           "festo cylinder pneumatic system",
           "cam base system",
-          "ppc super av machine",
+          "MPM super av machine",
         ],
       },
       {
@@ -293,8 +293,8 @@ const products = [
     id: 7,
     name: "Blister Packing Double Track Machine",
     category: 2,
-    model: "PPC - 240",
-    img: "ppc-240.jpg",
+    model: "MPM - 240",
+    img: "MPM-240.jpg",
     desc: [
       {
         name: "Special Features",
@@ -347,8 +347,8 @@ const products = [
     id: 8,
     name: "Blister Packing Single Track Machine",
     category: 2,
-    model: "PPC - 150",
-    img: "ppc-150.jpg",
+    model: "MPM - 150",
+    img: "MPM-150.jpg",
     desc: [
       {
         name: "Special Features",
@@ -403,8 +403,8 @@ const products = [
     id: 9,
     name: "Blister Ampoules Rotary Machine",
     category: 2,
-    model: "PPC - AMPOULES ROTARY",
-    img: "ppc-ampoules-rotary.jpg",
+    model: "MPM - AMPOULES ROTARY",
+    img: "MPM-ampoules-rotary.jpg",
     desc: [
       {
         name: "Special Features",
@@ -512,8 +512,8 @@ const products = [
     id: 10,
     name: "Universal De Blister Machine (G.M.P. Model)",
     category: 2,
-    model: "PPC – DIE BLISTER",
-    img: "ppc-de-blister.jpg",
+    model: "MPM – DIE BLISTER",
+    img: "MPM-de-blister.jpg",
     desc: [
       {
         name: "Special Features",
@@ -545,8 +545,8 @@ const products = [
     id: 11,
     name: "Alu Alu Machine (Lab Model)",
     category: 1,
-    model: "PPC – LAB MODEL (ALU + PVC)",
-    img: "ppc-lab-model.jpg",
+    model: "MPM – LAB MODEL (ALU + PVC)",
+    img: "MPM-lab-model.jpg",
     desc: [
       {
         name: "Special Features",
@@ -595,7 +595,7 @@ const products = [
     name: "Tablet De-Duster Machine",
     category: null,
     model: "PP4 Tablet Cleaning and de-burring unit",
-    img: "ppc-de-duster.jpg",
+    img: "MPM-de-duster.jpg",
     desc: [
       {
         name: "Description",
