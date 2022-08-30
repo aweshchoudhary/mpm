@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { products, category, banner, details } = require("../apps/content");
+const mainMail = require("../apps/mailer.js");
 
 router.get("/", (req, res) => {
   res.render("home", { products, category, banner, details, title: "Home" });
@@ -43,6 +44,23 @@ router.get("/product/:id", (req, res) => {
     }
   });
   res.render("./pages/product", { p, products, category, title: p.name });
+});
+
+router.get("/sitemap", (req, res) => {
+  res.download("sitemap.xml");
+});
+
+router.post("/enquiry", async (req, res, next) => {
+  const { fname, lname, email, subject, message } = req.body;
+  try {
+    const fullname = fname + " " + lname;
+    await mainMail(fullname, email, subject, message);
+
+    res.render("home");
+  } catch (error) {
+    console.log(error);
+    res.send("Message Could not be Sent");
+  }
 });
 
 module.exports = router;

@@ -39,7 +39,7 @@
     </div>
     <div class="row my-5 p-0 mx-0">
       <div class="col-md-4">
-        <div class="list-group tab mb-md-0 mb-3">
+        <div class="list-group d-md-block d-none tab mb-md-0 mb-3">
           <% p.desc.map((e, i)=>{ %> <% if(i == 0){ %>
           <button
             class="tablinks list-group-item py-3 text-capitalize list-group-item-action fs-5 fw-bold"
@@ -56,6 +56,29 @@
             <%= e.name%>
           </button>
           <% } %> <%})%>
+        </div>
+        <div class="dropdown d-md-none d-block w-100">
+          <button
+            class="btn px-5 py-3 mb-4 btn-primary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="dropdown-select"
+          >
+            Select
+          </button>
+          <ul class="dropdown-menu">
+            <% p.desc.map((e, i)=>{ %>
+            <li>
+              <button
+                class="tablinks dropdown-item"
+                onclick="openCity(event, '<%= e.name %>')"
+              >
+                <%= e.name%>
+              </button>
+            </li>
+            <%})%>
+          </ul>
         </div>
       </div>
       <div class="col-md-8">

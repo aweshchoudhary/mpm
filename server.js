@@ -5,6 +5,7 @@ const ejs = require("ejs");
 const layouts = require("express-ejs-layouts");
 const path = require("path");
 const routes = require("./routes/main");
+require("dotenv").config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

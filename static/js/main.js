@@ -5,7 +5,7 @@ for (let i = 0; i < tables.length; i++) {
 
 function openCity(evt, tabName) {
   // Declare all variables
-  var i, tabcontent, tablinks;
+  var i, tabcontent, tablinks, displayBtn;
 
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -22,6 +22,9 @@ function openCity(evt, tabName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+
+  displayBtn = document.getElementById("dropdown-select");
+  displayBtn.innerText = tabName;
 }
 
 document.getElementById("defaultOpen").click();
